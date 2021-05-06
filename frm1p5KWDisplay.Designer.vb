@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm1p5KWDisplay
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frm1p5KWDisplay
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblB0_XMIT = New System.Windows.Forms.Label()
         Me.lblB1_SWR_Fault = New System.Windows.Forms.Label()
@@ -42,6 +42,14 @@ Partial Class frm1p5KWDisplay
         Me.thmALC_Level = New Thermometer.Thermometer()
         Me.thmWattsOut = New Thermometer.Thermometer()
         Me.cmdRstMaxMin = New System.Windows.Forms.Button()
+        Me.lblShowStat = New System.Windows.Forms.Label()
+        Me.cmdStartBgnd = New System.Windows.Forms.Button()
+        Me.cmdStopConvert = New System.Windows.Forms.Button()
+        Me.cmdQuit = New System.Windows.Forms.Button()
+        Me.lblInstruction = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.mnuViewUSBOp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblB0_XMIT
@@ -49,7 +57,7 @@ Partial Class frm1p5KWDisplay
         Me.lblB0_XMIT.AutoSize = True
         Me.lblB0_XMIT.BackColor = System.Drawing.SystemColors.Control
         Me.lblB0_XMIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblB0_XMIT.Location = New System.Drawing.Point(40, 319)
+        Me.lblB0_XMIT.Location = New System.Drawing.Point(142, 314)
         Me.lblB0_XMIT.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblB0_XMIT.Name = "lblB0_XMIT"
         Me.lblB0_XMIT.Size = New System.Drawing.Size(75, 15)
@@ -61,7 +69,7 @@ Partial Class frm1p5KWDisplay
         '
         Me.lblB1_SWR_Fault.BackColor = System.Drawing.SystemColors.Control
         Me.lblB1_SWR_Fault.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblB1_SWR_Fault.Location = New System.Drawing.Point(364, 318)
+        Me.lblB1_SWR_Fault.Location = New System.Drawing.Point(466, 313)
         Me.lblB1_SWR_Fault.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblB1_SWR_Fault.Name = "lblB1_SWR_Fault"
         Me.lblB1_SWR_Fault.Size = New System.Drawing.Size(75, 15)
@@ -74,7 +82,7 @@ Partial Class frm1p5KWDisplay
         Me.lblB2_OvrTemp.AutoSize = True
         Me.lblB2_OvrTemp.BackColor = System.Drawing.SystemColors.Control
         Me.lblB2_OvrTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblB2_OvrTemp.Location = New System.Drawing.Point(202, 319)
+        Me.lblB2_OvrTemp.Location = New System.Drawing.Point(304, 314)
         Me.lblB2_OvrTemp.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblB2_OvrTemp.Name = "lblB2_OvrTemp"
         Me.lblB2_OvrTemp.Size = New System.Drawing.Size(75, 15)
@@ -87,7 +95,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts0.AutoSize = True
         Me.lblVolts0.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts0.Location = New System.Drawing.Point(40, 353)
+        Me.lblVolts0.Location = New System.Drawing.Point(142, 348)
         Me.lblVolts0.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts0.Name = "lblVolts0"
         Me.lblVolts0.Size = New System.Drawing.Size(75, 15)
@@ -99,7 +107,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts1.AutoSize = True
         Me.lblVolts1.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts1.Location = New System.Drawing.Point(121, 353)
+        Me.lblVolts1.Location = New System.Drawing.Point(223, 348)
         Me.lblVolts1.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts1.Name = "lblVolts1"
         Me.lblVolts1.Size = New System.Drawing.Size(75, 15)
@@ -111,7 +119,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts2.AutoSize = True
         Me.lblVolts2.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts2.Location = New System.Drawing.Point(202, 353)
+        Me.lblVolts2.Location = New System.Drawing.Point(304, 348)
         Me.lblVolts2.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts2.Name = "lblVolts2"
         Me.lblVolts2.Size = New System.Drawing.Size(75, 15)
@@ -123,7 +131,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts3.AutoSize = True
         Me.lblVolts3.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts3.Location = New System.Drawing.Point(283, 353)
+        Me.lblVolts3.Location = New System.Drawing.Point(385, 348)
         Me.lblVolts3.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts3.Name = "lblVolts3"
         Me.lblVolts3.Size = New System.Drawing.Size(75, 15)
@@ -135,7 +143,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts4.AutoSize = True
         Me.lblVolts4.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts4.Location = New System.Drawing.Point(364, 353)
+        Me.lblVolts4.Location = New System.Drawing.Point(466, 348)
         Me.lblVolts4.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts4.Name = "lblVolts4"
         Me.lblVolts4.Size = New System.Drawing.Size(75, 15)
@@ -147,7 +155,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts5.AutoSize = True
         Me.lblVolts5.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts5.Location = New System.Drawing.Point(445, 353)
+        Me.lblVolts5.Location = New System.Drawing.Point(547, 348)
         Me.lblVolts5.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts5.Name = "lblVolts5"
         Me.lblVolts5.Size = New System.Drawing.Size(75, 15)
@@ -159,7 +167,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts6.AutoSize = True
         Me.lblVolts6.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts6.Location = New System.Drawing.Point(526, 353)
+        Me.lblVolts6.Location = New System.Drawing.Point(628, 348)
         Me.lblVolts6.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts6.Name = "lblVolts6"
         Me.lblVolts6.Size = New System.Drawing.Size(75, 15)
@@ -171,7 +179,7 @@ Partial Class frm1p5KWDisplay
         Me.lblVolts7.AutoSize = True
         Me.lblVolts7.BackColor = System.Drawing.SystemColors.Control
         Me.lblVolts7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblVolts7.Location = New System.Drawing.Point(607, 353)
+        Me.lblVolts7.Location = New System.Drawing.Point(709, 348)
         Me.lblVolts7.MinimumSize = New System.Drawing.Size(75, 2)
         Me.lblVolts7.Name = "lblVolts7"
         Me.lblVolts7.Size = New System.Drawing.Size(75, 15)
@@ -195,7 +203,7 @@ Partial Class frm1p5KWDisplay
         Me.thmReflectedWatts.LblY2Value = 200.0!
         Me.thmReflectedWatts.LblY3Value = 300.0!
         Me.thmReflectedWatts.LblY4Value = 400.0!
-        Me.thmReflectedWatts.Location = New System.Drawing.Point(607, 26)
+        Me.thmReflectedWatts.Location = New System.Drawing.Point(709, 21)
         Me.thmReflectedWatts.MaxLegal = 0!
         Me.thmReflectedWatts.MaxMinReset = True
         Me.thmReflectedWatts.MaxOverMaxLegal = False
@@ -230,7 +238,7 @@ Partial Class frm1p5KWDisplay
         Me.thmVdd.LblY2Value = 50.0!
         Me.thmVdd.LblY3Value = 75.0!
         Me.thmVdd.LblY4Value = 100.0!
-        Me.thmVdd.Location = New System.Drawing.Point(526, 26)
+        Me.thmVdd.Location = New System.Drawing.Point(628, 21)
         Me.thmVdd.MaxLegal = 0!
         Me.thmVdd.MaxMinReset = False
         Me.thmVdd.MaxOverMaxLegal = False
@@ -265,7 +273,7 @@ Partial Class frm1p5KWDisplay
         Me.thmIdd.LblY2Value = 50.0!
         Me.thmIdd.LblY3Value = 75.0!
         Me.thmIdd.LblY4Value = 100.0!
-        Me.thmIdd.Location = New System.Drawing.Point(445, 26)
+        Me.thmIdd.Location = New System.Drawing.Point(547, 21)
         Me.thmIdd.MaxLegal = 75.0!
         Me.thmIdd.MaxMinReset = False
         Me.thmIdd.MaxOverMaxLegal = False
@@ -300,7 +308,7 @@ Partial Class frm1p5KWDisplay
         Me.thmDkRev.LblY2Value = 300.0!
         Me.thmDkRev.LblY3Value = 400.0!
         Me.thmDkRev.LblY4Value = 500.0!
-        Me.thmDkRev.Location = New System.Drawing.Point(364, 26)
+        Me.thmDkRev.Location = New System.Drawing.Point(466, 21)
         Me.thmDkRev.MaxLegal = 0!
         Me.thmDkRev.MaxMinReset = False
         Me.thmDkRev.MaxOverMaxLegal = True
@@ -335,7 +343,7 @@ Partial Class frm1p5KWDisplay
         Me.thmDkFor.LblY2Value = 1500.0!
         Me.thmDkFor.LblY3Value = 2000.0!
         Me.thmDkFor.LblY4Value = 2200.0!
-        Me.thmDkFor.Location = New System.Drawing.Point(283, 26)
+        Me.thmDkFor.Location = New System.Drawing.Point(385, 21)
         Me.thmDkFor.MaxLegal = 0!
         Me.thmDkFor.MaxMinReset = False
         Me.thmDkFor.MaxOverMaxLegal = False
@@ -370,7 +378,7 @@ Partial Class frm1p5KWDisplay
         Me.thmTemp.LblY2Value = 40.0!
         Me.thmTemp.LblY3Value = 50.0!
         Me.thmTemp.LblY4Value = 60.0!
-        Me.thmTemp.Location = New System.Drawing.Point(202, 26)
+        Me.thmTemp.Location = New System.Drawing.Point(304, 21)
         Me.thmTemp.MaxLegal = 50.0!
         Me.thmTemp.MaxMinReset = True
         Me.thmTemp.MaxOverMaxLegal = True
@@ -405,7 +413,7 @@ Partial Class frm1p5KWDisplay
         Me.thmALC_Level.LblY2Value = -1.0!
         Me.thmALC_Level.LblY3Value = 0!
         Me.thmALC_Level.LblY4Value = 1.0!
-        Me.thmALC_Level.Location = New System.Drawing.Point(121, 26)
+        Me.thmALC_Level.Location = New System.Drawing.Point(223, 21)
         Me.thmALC_Level.MaxLegal = 0!
         Me.thmALC_Level.MaxMinReset = False
         Me.thmALC_Level.MaxOverMaxLegal = False
@@ -440,7 +448,7 @@ Partial Class frm1p5KWDisplay
         Me.thmWattsOut.LblY2Value = 1000.0!
         Me.thmWattsOut.LblY3Value = 1500.0!
         Me.thmWattsOut.LblY4Value = 1800.0!
-        Me.thmWattsOut.Location = New System.Drawing.Point(40, 26)
+        Me.thmWattsOut.Location = New System.Drawing.Point(142, 21)
         Me.thmWattsOut.MaxLegal = 0!
         Me.thmWattsOut.MaxMinReset = True
         Me.thmWattsOut.MaxOverMaxLegal = False
@@ -460,20 +468,112 @@ Partial Class frm1p5KWDisplay
         '
         'cmdRstMaxMin
         '
-        Me.cmdRstMaxMin.Location = New System.Drawing.Point(526, 309)
+        Me.cmdRstMaxMin.Location = New System.Drawing.Point(628, 304)
         Me.cmdRstMaxMin.Name = "cmdRstMaxMin"
         Me.cmdRstMaxMin.Size = New System.Drawing.Size(75, 36)
         Me.cmdRstMaxMin.TabIndex = 27
         Me.cmdRstMaxMin.Text = "Reset Max Min"
         Me.cmdRstMaxMin.UseVisualStyleBackColor = True
         '
+        'lblShowStat
+        '
+        Me.lblShowStat.BackColor = System.Drawing.SystemColors.Window
+        Me.lblShowStat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblShowStat.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblShowStat.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblShowStat.ForeColor = System.Drawing.Color.Blue
+        Me.lblShowStat.Location = New System.Drawing.Point(12, 348)
+        Me.lblShowStat.Name = "lblShowStat"
+        Me.lblShowStat.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblShowStat.Size = New System.Drawing.Size(101, 17)
+        Me.lblShowStat.TabIndex = 51
+        '
+        'cmdStartBgnd
+        '
+        Me.cmdStartBgnd.BackColor = System.Drawing.Color.LawnGreen
+        Me.cmdStartBgnd.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdStartBgnd.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStartBgnd.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdStartBgnd.Location = New System.Drawing.Point(12, 34)
+        Me.cmdStartBgnd.Name = "cmdStartBgnd"
+        Me.cmdStartBgnd.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdStartBgnd.Size = New System.Drawing.Size(101, 64)
+        Me.cmdStartBgnd.TabIndex = 52
+        Me.cmdStartBgnd.Text = "Start Background Operation"
+        Me.cmdStartBgnd.UseVisualStyleBackColor = False
+        '
+        'cmdStopConvert
+        '
+        Me.cmdStopConvert.BackColor = System.Drawing.Color.Red
+        Me.cmdStopConvert.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdStopConvert.Enabled = False
+        Me.cmdStopConvert.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopConvert.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdStopConvert.Location = New System.Drawing.Point(12, 104)
+        Me.cmdStopConvert.Name = "cmdStopConvert"
+        Me.cmdStopConvert.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdStopConvert.Size = New System.Drawing.Size(101, 64)
+        Me.cmdStopConvert.TabIndex = 53
+        Me.cmdStopConvert.Text = "Stop Background Operation"
+        Me.cmdStopConvert.UseVisualStyleBackColor = False
+        '
+        'cmdQuit
+        '
+        Me.cmdQuit.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdQuit.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdQuit.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdQuit.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdQuit.Location = New System.Drawing.Point(12, 174)
+        Me.cmdQuit.Name = "cmdQuit"
+        Me.cmdQuit.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdQuit.Size = New System.Drawing.Size(101, 64)
+        Me.cmdQuit.TabIndex = 54
+        Me.cmdQuit.Text = "Quit"
+        Me.cmdQuit.UseVisualStyleBackColor = False
+        '
+        'lblInstruction
+        '
+        Me.lblInstruction.BackColor = System.Drawing.SystemColors.Window
+        Me.lblInstruction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblInstruction.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblInstruction.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstruction.ForeColor = System.Drawing.Color.Red
+        Me.lblInstruction.Location = New System.Drawing.Point(12, 243)
+        Me.lblInstruction.Name = "lblInstruction"
+        Me.lblInstruction.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblInstruction.Size = New System.Drawing.Size(101, 86)
+        Me.lblInstruction.TabIndex = 58
+        Me.lblInstruction.Text = "Board 0 must have analog inputs that support paced acquisition."
+        Me.lblInstruction.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuViewUSBOp})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(815, 24)
+        Me.MenuStrip1.TabIndex = 59
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'mnuViewUSBOp
+        '
+        Me.mnuViewUSBOp.CheckOnClick = True
+        Me.mnuViewUSBOp.Name = "mnuViewUSBOp"
+        Me.mnuViewUSBOp.Size = New System.Drawing.Size(110, 20)
+        Me.mnuViewUSBOp.Text = "View USB-204 Op"
+        '
         'frm1p5KWDisplay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(727, 377)
+        Me.ClientSize = New System.Drawing.Size(815, 377)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblInstruction)
+        Me.Controls.Add(Me.cmdQuit)
+        Me.Controls.Add(Me.cmdStopConvert)
+        Me.Controls.Add(Me.cmdStartBgnd)
+        Me.Controls.Add(Me.lblShowStat)
         Me.Controls.Add(Me.cmdRstMaxMin)
         Me.Controls.Add(Me.lblVolts7)
         Me.Controls.Add(Me.lblVolts6)
@@ -494,10 +594,14 @@ Partial Class frm1p5KWDisplay
         Me.Controls.Add(Me.lblB1_SWR_Fault)
         Me.Controls.Add(Me.lblB0_XMIT)
         Me.Controls.Add(Me.thmWattsOut)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Location = New System.Drawing.Point(1800, 40)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frm1p5KWDisplay"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "GMC 1.5KW Parameters"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -523,4 +627,11 @@ Partial Class frm1p5KWDisplay
     Friend WithEvents lblVolts6 As Label
     Friend WithEvents lblVolts7 As Label
     Friend WithEvents cmdRstMaxMin As Button
+    Public WithEvents lblShowStat As Label
+    Public WithEvents cmdStartBgnd As Button
+    Public WithEvents cmdStopConvert As Button
+    Public WithEvents cmdQuit As Button
+    Public WithEvents lblInstruction As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents mnuViewUSBOp As ToolStripMenuItem
 End Class

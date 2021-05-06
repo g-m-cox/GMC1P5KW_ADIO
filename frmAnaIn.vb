@@ -15,6 +15,7 @@ Friend Class frmAnaIn
     Private Range As MccDaq.Range
     Private ADResolution, NumAIChans As Integer
     Private HighChan, LowChan, MaxChan As Integer
+    Private boolFirstActivate As Boolean
 
     Const NumPoints As Integer = 31744  ' Number of data points to collect
     '                                     For some devices, this number must be a
@@ -92,9 +93,6 @@ Friend Class frmAnaIn
             mbrMBRET = MsgBox("Location Set failed " & vbCrLf & strErrStr)
         End If
 
-
-
-
         ' determine the number of analog channels and their capabilities
         Dim ChannelType As Integer = ANALOGINPUT
         NumAIChans = FindAnalogChansOfType(DaqBoard, ChannelType,
@@ -126,7 +124,8 @@ Friend Class frmAnaIn
 
 
     End Sub
-    Private Sub cmdStartBgnd_Click(ByVal eventSender As System.Object,
+
+    Public Sub cmdStartBgnd_Click(ByVal eventSender As System.Object,
         ByVal eventArgs As System.EventArgs) Handles cmdStartBgnd.Click
 
 
@@ -140,11 +139,15 @@ Friend Class frmAnaIn
         Dim ValidChan As Boolean
         Dim MBRet As DialogResult
 
+
         cmdStartBgnd.Enabled = False
+        frm1p5KWDisplay.cmdStartBgnd.Enabled = False
         cmdStartBgnd.Visible = False
         cmdStopConvert.Enabled = True
+        frm1p5KWDisplay.cmdStopConvert.Enabled = True
         cmdStopConvert.Visible = True
         cmdQuit.Enabled = False
+        frm1p5KWDisplay.cmdQuit.Enabled = False
 
         ' Collect the values by calling MccDaq.MccBoard.AInScan
         '  Parameters:
@@ -340,11 +343,21 @@ Friend Class frmAnaIn
 
     End Sub
 
-    Private Sub frmAnaIn_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        frm1p5KWDisplay.Activate()
+    Private Sub lblInstruction_TextChanged(sender As Object, e As EventArgs) Handles lblInstruction.TextChanged
+        frm1p5KWDisplay.lblInstruction.Text = Me.lblInstruction.Text
     End Sub
 
-    Private Sub cmdStopConvert_Click(ByVal eventSender As System.Object,
+    Private Sub lblShowStat_TextChanged(sender As Object, e As EventArgs) Handles lblShowStat.TextChanged
+        frm1p5KWDisplay.lblShowStat.Text = Me.lblShowStat.Text
+    End Sub
+
+    Private Sub frmAnaIn_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Me.Visible = False
+        frm1p5KWDisplay.mnuViewUSBOp.Checked = False
+
+    End Sub
+
+    Public Sub cmdStopConvert_Click(ByVal eventSender As System.Object,
     ByVal eventArgs As System.EventArgs) Handles cmdStopConvert.Click
 
         Dim CurIndex As Integer
@@ -356,8 +369,11 @@ Friend Class frmAnaIn
         If ULStat.Value <> MccDaq.ErrorInfo.ErrorCode.NoErrors Then Stop
 
         cmdStartBgnd.Enabled = True : cmdStartBgnd.Visible = True
+        frm1p5KWDisplay.cmdStartBgnd.Enabled = True
         cmdStopConvert.Enabled = False : cmdStopConvert.Visible = False
+        frm1p5KWDisplay.cmdStopConvert.Enabled = False
         cmdQuit.Enabled = True
+        frm1p5KWDisplay.cmdQuit.Enabled = True
         tmrCheckStatus.Enabled = False
 
         ULStat = DaqBoard.GetStatus(Status, CurCount, CurIndex, MccDaq.FunctionType.AiFunction)
@@ -369,7 +385,7 @@ Friend Class frmAnaIn
 
     End Sub
 
-    Private Sub cmdQuit_Click(ByVal eventSender As System.Object,
+    Public Sub cmdQuit_Click(ByVal eventSender As System.Object,
     ByVal eventArgs As System.EventArgs) Handles cmdQuit.Click
 
         Dim ULStat As MccDaq.ErrorInfo

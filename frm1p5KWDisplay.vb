@@ -1,4 +1,6 @@
-﻿Public Class frm1p5KWDisplay
+﻿Imports System.Windows.Forms.VisualStyles
+
+Public Class frm1p5KWDisplay
 
     Public lblBitNum As System.Windows.Forms.Label()
     Public lblBitVal As System.Windows.Forms.Label()
@@ -11,6 +13,7 @@
     Private sngWattsRevAvg As Single
     Private sngALCAvg As Single
     Private strSubkey As String = "Software\AF5LA\GMC1p5KWDisplay"
+    Private boolFirstActivate As Boolean
 
 
 
@@ -114,6 +117,7 @@
 
         Dim i As Integer
         Dim sngRegVal As Single
+
 
         lblBitVal = New System.Windows.Forms.Label(3) {}
         Me.lblBitVal.SetValue(Me.lblB0_XMIT, 0)
@@ -227,7 +231,27 @@
 
     End Sub
 
-    Private Sub frm1p5KWDisplay_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        frmAnaIn.Activate()
+    'send the local Start, Stop and Quit cmd clicks to frmAnaIn subs for the same buttons
+
+    Private Sub cmdStartBgnd_Click(sender As Object, e As EventArgs) Handles cmdStartBgnd.Click
+        frmAnaIn.cmdStartBgnd_Click(sender, e)
     End Sub
+
+    Private Sub cmdStopConvert_Click(sender As Object, e As EventArgs) Handles cmdStopConvert.Click
+        frmAnaIn.cmdStopConvert_Click(sender, e)
+    End Sub
+
+    Private Sub cmdQuit_Click(sender As Object, e As EventArgs) Handles cmdQuit.Click
+        frmAnaIn.cmdQuit_Click(sender, e)
+    End Sub
+
+    Private Sub mnuViewUSBOp_Click(sender As Object, e As EventArgs) Handles mnuViewUSBOp.Click
+        If mnuViewUSBOp.Checked = True Then
+            frmAnaIn.Visible = True
+        Else
+            frmAnaIn.Visible = False
+        End If
+    End Sub
+
+
 End Class
